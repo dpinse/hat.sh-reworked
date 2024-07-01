@@ -154,17 +154,26 @@ export default function Footer() {
     <div className={classes.root}>
       <footer className={classes.footer}>
         <Container maxWidth="sm">
-          <Typography variant="body1">
-            Built and developed by{" "}
+        <Typography variant="body1">
+            Built by{' '}
             <Link
-              href="https://dpinse.com"
-              target="_blank"
-              rel="noopener"
-              color="inherit"
+            href="https://github.com/sh-dv/hat.sh"
+    target="_blank"
+    rel="noopener"
+    color="inherit"
             >
-              {"Dpinse"}
-            </Link>
-          </Typography>
+            sh-dv
+            </Link>{' '}
+            and maintained by{' '}
+            <Link
+            href="https://dpinse.com"
+            target="_blank"
+            rel="noopener"
+            color="inherit"
+            >
+            Dpinse
+  </Link>
+</Typography>
 
           <Chip
             size="small"
