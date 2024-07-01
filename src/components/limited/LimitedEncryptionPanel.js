@@ -244,6 +244,7 @@ const LimitedEncryptionPanel = () => {
     setActiveStep(0);
     setFile();
     setPassword();
+    setConfirmPassword();
     setIsEncrypting(false);
     setPublicKey();
     setPrivateKey();
@@ -842,11 +843,13 @@ const LimitedEncryptionPanel = () => {
       fullWidth
       InputProps={{
         endAdornment: (
+          ConfirmPassword && (
           <Tooltip title={t("show_password")} placement="left">
             <IconButton onClick={() => setShowConfirmPassword(!showConfirmPassword)}>
               {showConfirmPassword ? <Visibility /> : <VisibilityOff />}
             </IconButton>
           </Tooltip>
+          )
         ),
       }}
     />
