@@ -297,6 +297,7 @@ export default function EncryptionPanel() {
     setActiveStep(0);
     setFiles([]);
     setPassword();
+    setConfirmPassword();
     setPublicKey();
     setPrivateKey();
     privateKey = null;
@@ -905,12 +906,14 @@ export default function EncryptionPanel() {
    fullWidth
    InputProps={{
      endAdornment: (
+      ConfirmPassword && (
        <Tooltip title={t("show_password")} placement="left">
          <IconButton onClick={() => setShowConfirmPassword(!showConfirmPassword)}>
            {showConfirmPassword ? <Visibility /> : <VisibilityOff />}
          </IconButton>
        </Tooltip>
-     ),
+      ) 
+    ),
    }}
  />
 </>
